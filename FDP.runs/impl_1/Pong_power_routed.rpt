@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Mar 18 01:47:46 2025
+| Date             : Tue Mar 18 20:30:22 2025
 | Host             : 4000D running 64-bit major release  (build 9200)
 | Command          : report_power -file Pong_power_routed.rpt -pb Pong_power_summary_routed.pb -rpx Pong_power_routed.rpx
 | Design           : Pong
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.078        |
+| Total On-Chip Power (W)  | 0.082        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.006        |
+| Dynamic (W)              | 0.010        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     1123 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      508 |     20800 |            2.44 |
-|   CARRY4       |    <0.001 |       64 |      8150 |            0.79 |
-|   Register     |    <0.001 |      389 |     41600 |            0.94 |
+| Clocks         |     0.003 |        3 |       --- |             --- |
+| Slice Logic    |     0.002 |     1263 |       --- |             --- |
+|   LUT as Logic |     0.001 |      590 |     20800 |            2.84 |
+|   CARRY4       |    <0.001 |       88 |      8150 |            1.08 |
+|   Register     |    <0.001 |      417 |     41600 |            1.00 |
 |   F7/F8 Muxes  |    <0.001 |        2 |     32600 |           <0.01 |
-|   Others       |     0.000 |       12 |       --- |             --- |
+|   Others       |     0.000 |       14 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-| Signals        |    <0.001 |      785 |       --- |             --- |
-| I/O            |     0.002 |       12 |       106 |           11.32 |
+| Signals        |     0.002 |      882 |       --- |             --- |
+| I/O            |     0.004 |       16 |       106 |           15.09 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.078 |          |           |                 |
+| Total          |     0.082 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.014 |       0.004 |      0.010 |
+| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -142,14 +142,15 @@ Table of Contents
 +-----------------------+-----------+
 | Name                  | Power (W) |
 +-----------------------+-----------+
-| Pong                  |     0.006 |
+| Pong                  |     0.010 |
 |   PS2Clk_IOBUF_inst   |     0.000 |
 |   PS2Data_IOBUF_inst  |     0.000 |
 |   divider_6p25MHz     |    <0.001 |
-|   mouse_control       |     0.003 |
+|   mouse_control       |     0.004 |
 |     Inst_Ps2Interface |     0.001 |
 |   oled_display        |    <0.001 |
-|   paddle_instance     |    <0.001 |
+|   paddle_instance     |     0.001 |
+|     debounce_left     |    <0.001 |
 +-----------------------+-----------+
 
 
