@@ -1,1 +1,1 @@
-# EE2026_Pong
+# Pong
